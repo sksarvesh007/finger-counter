@@ -15,6 +15,7 @@ myList=os.listdir(folderpath)
 print(myList)
 while True :
     hola = []
+    amigo=[]
     success , img = cap.read()
     ctime = time.time()
     fps=1/(ctime-ptime)
