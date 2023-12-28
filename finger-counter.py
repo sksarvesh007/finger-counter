@@ -16,6 +16,7 @@ print(myList)
 while True :
     hola = []
     amigo=[]
+    chungus=[]
     success , img = cap.read()
     ctime = time.time()
     fps=1/(ctime-ptime)
