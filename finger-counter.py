@@ -13,11 +13,15 @@ ptime =0
 folderpath = "finger images"
 myList=os.listdir(folderpath)
 print(myList)
+overlaylist=[]
+for impath in myList:
+    image = cv2.imread(f'{folderpath}/{impath}')
+    print(f'{folderpath}/{impath}')
+    overlaylist.append(image)
 while True :
-    hola = []
-    amigo=[]
-    chungus=[]
     success , img = cap.read()
+    img = img.resize((200,200))
+    img[0:200 , 0:200] = overlaylist[0]
     ctime = time.time()
     fps=1/(ctime-ptime)
     ptime=ctime
